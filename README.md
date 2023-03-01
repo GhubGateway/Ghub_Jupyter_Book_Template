@@ -12,6 +12,15 @@
 git clone https://github.com/rljbufny1/ghub_vhub_exercise2
 ```
 
+or 
+
+```
+wget https://github.com/rljbufny1/ghub_vhub_exercise2/releases/download/v1.0.0/ghub_vhub_exercise2-src.tar.gz
+
+tar xvzf ghub_vhub_exercise2-src.tar.gz
+
+```
+
 ### Create an environment per ./environment.yml:
 
 ```
@@ -23,7 +32,7 @@ Note:
 Had to explicitly install python -m pip install cartopy==0.18.0 --target ./lib
 (cartopy 0.21.0 requires GEOS 3.7.2 but GEOS 3.7.1 is currently installed.)
 
-Had to explicitly install python -m pip install chublib--target ./lib
+Had to explicitly install python -m pip install hublib --target ./lib
 
 ### Install the Utils package to the created environment per ./setup.py:
 
@@ -41,5 +50,5 @@ Select a volcano.<br />
 Click the Run Workflow Button.<br />
 
 #### See https://theghub.org/about for more information on Ghub. 
-#### See https://pegasus.isi.edu/about for more information on the Pegasus WMS.
 #### See https://www.buffalo.edu/ccr.html for more information on CCR.
+#### See https://pegasus.isi.edu/about for more information on the Pegasus WMS.
