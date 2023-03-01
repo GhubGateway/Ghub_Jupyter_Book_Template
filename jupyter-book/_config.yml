@@ -1,0 +1,32 @@
+title          : Ghub / Vhub exercise 2
+author         : Renette Jones-Ivey
+copyright      : "2023"  
+logo           : AP23006160346528.jpg
+only_build_toc_files: true
+
+html:
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  home_page_in_navbar: false
+  baseurl: https://whyjz.github.io/glacier-ft-test
+
+# bibtex_bibfiles:
+#  - refs.bib
+
+# bibtex_reference_style: author_year
+
+repository:
+  url: https://github.com/rljbufny1/ghub_vhub_exercise2
+  branch: master
+  path_to_book: jupyter-book
+
+# launch_buttons:
+#   notebook_interface: "jupyterlab" # The interface interactive links will activate ["classic", "jupyterlab"]
+#   binderhub_url: "https://mybinder.org"
+#   thebe: true
+  
+execute:
+  execute_notebooks : 'off'
+  timeout           : 30
+  allow_errors      : false

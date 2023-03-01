@@ -1,0 +1,14 @@
+format: jb-book
+root: index
+parts:
+- caption: Ghub / Vhub exercise 2 user manual
+  numbered: false
+  chapters:
+  - file: user_manual
+
+- caption: Supplementary material
+  numbered: false
+  chapters:
+  - file: notebooks/ghub_vhub_exercise2.ipynb
+
+# sections:

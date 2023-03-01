@@ -18,12 +18,18 @@ git clone https://github.com/rljbufny1/ghub_vhub_exercise2
 use -e -r anaconda-7
 conda env create -f environment.yml --prefix ./env
 ```
+Note: 
 
-### Install the Utils package to the created enviromnent per ./setup.py:
+Had to explicitly install python -m pip install cartopy==0.18.0 --target ./lib
+(cartopy 0.21.0 requires GEOS 3.7.2 but GEOS 3.7.1 is currently installed.)
+
+Had to explicitly install python -m pip install chublib--target ./lib
+
+### Install the Utils package to the created environment per ./setup.py:
 
 ```
 conda activate ./env
-python -m pip install . -- target ./lib
+python -m pip install . --target ./lib
 ```
 
 ### To run on Ghub:

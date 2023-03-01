@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Reference: https://vhub.org/kb/Development/deploy-styles-for-jupyter-tools
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise1.ipynbghub_vhub_exercise2_landing_page.ipynb" -t ghub_vhub_exercise2 -u anaconda-7 -r none

@@ -1,0 +1,5 @@
+cartopy
+hublib
+ipywidgets
+jupyter-book
+numpy
