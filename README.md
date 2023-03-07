@@ -2,7 +2,38 @@
 
 - Demonstrates installing a Jupyter Book Github project on Ghub.
 
-## To install on Ghub
+### Requirements (Notes for Github Developers)
+
+#### Main directory Landing page jupyter notebook
+
+The landing page jupyter notebook contains the calls to run jupyter-book.
+
+Example:
+
+ghub_exercise2_landing_page.ipynb
+
+#### middleware directory invoke script
+
+The middleware directory invoke script enables the landing page jupyter notebook to be launched on Ghub.
+
+Example:
+
+#!/bin/sh
+
+bindir="$(dirname "$(pwd)")"/bin<br />
+libdir="$(dirname "$(pwd)")"/lib<br />
+export PYTHONPATH=$PYTHONPATH:${bindir}:${libdir}<br />
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none
+
+#### jupyter-book directory
+
+The jupyter-book directory contains the _config.yml and _toc.yml files as well as 
+additional files required by the Jupyter Book, for example, index.md.
+
+This directory also contains the link to the actual notebooks displayed by the Jupyter Book,
+for example, use ln -s ../notebooks notebooks to create thre link.
+
+## Install on Ghub (Notes for Ghub Administrators)
 
 ### Launch the Workspace 10 Tool and in a Terminal Widow enter:<br />
 
@@ -33,38 +64,7 @@ conda activate ./env
 python -m pip install . --target ./lib
 ```
 
-### Addtional Requirements
-
-#### landing page jupyter notebook
-
-The landing page jupyter notebook contains the calls to run jupyter-book.
-
-Example:
-
-ghub_exercise2_landing_page.ipynb
-
-#### middleware directory invoke script
-
-The middleware directory invoke script enables the landing page jupyter notebook to be launched on Ghub.
-
-Example:
-
-#!/bin/sh
-
-bindir="$(dirname "$(pwd)")"/bin<br />
-libdir="$(dirname "$(pwd)")"/lib<br />
-export PYTHONPATH=$PYTHONPATH:${bindir}:${libdir}<br />
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none
-
-#### jupyter-book directory
-
-The jupyter-book directory contains the _config.yml and _toc.yml files as well as 
-additional files required by the Jupyter Book, for example, index.md.
-
-This directory also contains the link to the actual notebooks displayed by the Jupyter Book,
-for example, use ln -s ../notebooks notebooks to create thre link.
-
-## To run on Ghub:
+## Launch on Ghub:
 
 ### Launch  the Jupyter Notebooks (202210) tool:<br />
 
