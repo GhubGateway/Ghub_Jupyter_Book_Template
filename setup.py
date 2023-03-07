@@ -15,7 +15,7 @@ setuptools.setup(
     version          = "0.1.0",
     author           = "rljbufny1",
     author_email     = "rljbufny1@gmail.com",
-    description      = "Python utility module for ghub/vhub exercise 2.",
+    description      = "Python utility module for ghub exercise 2.",
     long_description = long_description,
     long_description_content_type = "text/markdown",
     packages         = setuptools.find_packages(),

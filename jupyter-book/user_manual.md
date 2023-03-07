@@ -1,4 +1,4 @@
-# Ghub / Vhub  User Manual
+# Ghub Exercise 2 User Manual
 
 
 ## Input

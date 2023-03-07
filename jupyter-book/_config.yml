@@ -1,4 +1,4 @@
-title          : Ghub / Vhub exercise 2
+title          : Ghub Exercise 2
 author         : Renette Jones-Ivey
 copyright      : "2023"  
 logo           : AP23006160346528.jpg
@@ -9,7 +9,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   home_page_in_navbar: false
-  baseurl: https://whyjz.github.io/glacier-ft-test
+  baseurl: https://github.com/rljbufny1/ghub_exercise2
 
 # bibtex_bibfiles:
 #  - refs.bib
@@ -17,7 +17,7 @@ html:
 # bibtex_reference_style: author_year
 
 repository:
-  url: https://github.com/rljbufny1/ghub_vhub_exercise2
+  url: https://github.com/rljbufny1/ghub_exercise2
   branch: master
   path_to_book: jupyter-book
 

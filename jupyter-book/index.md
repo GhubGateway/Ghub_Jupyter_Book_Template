@@ -1,4 +1,4 @@
-# Ghub / Vhub  exercise 2 user manual | Other supplementary material 
+# Ghub exercise 2 user manual | Other supplementary material 
 
 Renette Jones-Ivey<sup>1</sup>
 
