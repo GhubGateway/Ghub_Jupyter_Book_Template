@@ -61,6 +61,9 @@ export PYTHONPATH=$PYTHONPATH:${bindir}:${libdir}<br />
 The jupyter-book directory contains the _config.yml and _toc.yml files as well as 
 additional files required by the Jupyter Book, for example, index.md.
 
+This directory also contains the link to the actual notebooks displayed by the Jupyter Book,
+for example, use ln -s ../notebooks notebooks to create thre link.
+
 ## To run on Ghub:
 
 ### Launch  the Jupyter Notebooks (202210) tool:<br />
