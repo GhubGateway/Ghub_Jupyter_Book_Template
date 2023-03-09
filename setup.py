@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 #with open("requirements.txt", "r") as fh:
 #    requirements = [line.strip() for line in fh]
-# Note: Requirements are satisfied by using the /apps/share64/debian10/anaconda/anaconda-7/envs/??? environment
+# Note: Requirements are satisfied by using the anaconda-7 environment
 
 
 setuptools.setup(
@@ -26,5 +26,5 @@ setuptools.setup(
         "Intended Audience :: Science/Research",
     ],
     python_requires  = '>= 3.8',
-    #install_requires = requirements,
+    #install_requires = requirements
 )

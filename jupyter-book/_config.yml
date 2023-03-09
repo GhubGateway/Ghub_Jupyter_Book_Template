@@ -1,8 +1,10 @@
 title          : Ghub Exercise 2
 author         : Renette Jones-Ivey
 copyright      : "2023"  
-logo           : AP23006160346528.jpg
+logo           : photo-1493329025335-18542a61595f.jpeg
 only_build_toc_files: true
+
+# Image downloaded from https://unsplash.com/photos/VSGEH7tKiUg
 
 html:
   use_edit_page_button: true
