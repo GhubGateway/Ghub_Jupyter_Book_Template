@@ -1,14 +1,13 @@
 format: jb-book
 root: index
 parts:
-- caption: Ghub exercise 2 user manual
+- caption: User Manual
   numbered: false
   chapters:
   - file: user_manual
 
-- caption: Supplementary material
+- caption: Notebooks
   numbered: false
   chapters:
-  - file: notebooks/ghub_exercise2.ipynb
-
-# sections:
+  - file: notebooks/ghub_exercise2_notebook1.ipynb
+  - file: notebooks/ghub_exercise2_notebook2.ipynb

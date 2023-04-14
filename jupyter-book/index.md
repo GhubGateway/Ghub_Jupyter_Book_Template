@@ -1,4 +1,4 @@
-# Ghub exercise 2 user manual | Other supplementary material 
+# Ghub Jupyter Book Template
 
 Renette Jones-Ivey<sup>1</sup>
 
@@ -9,6 +9,6 @@ Corresponding author and email: Renette Jones-Ivey (renettej@buffalo.edu)
 
 ## Content of this Jupyter Book
 
-**Part 1**: User Manual.
+**Part 1**: User Manual
 
-**Part 2**: Supplemental material.
+**Part 2**: Notebooks

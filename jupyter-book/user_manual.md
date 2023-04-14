@@ -1,7 +1,3 @@
-# Ghub Exercise 2 User Manual
+# User Manual
 
-
-## Input
-
-
-## Functions
+## Click on the Jupyter notebook's title to see the notebook's content.

@@ -1,8 +1,14 @@
 #!/bin/sh
 
-bindir="$(dirname "$(pwd)")"/bin
-libdir="$(dirname "$(pwd)")"/lib
-export PYTHONPATH=$PYTHONPATH:${bindir}:${libdir}
+# References: https://theghub.org/kb/development/deploy-styles-for-jupyter-tools, https://theghub.org/kb/development/invoke-scripts-for-jupyter-notebooks
+# -A: App Mode
 
-# Reference: https://vhub.org/kb/Development/deploy-styles-for-jupyter-tools
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none
+# Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:
+# -C: Command to execute for starting the tool
+# -T: Tool root directory
+# -t: Sets ${toolname}
+# -u: Set use scripts to invoke before running the tool
+# -r: Set RAPPTURE_VERSION
+# -p: Prepend to the PATH environment variable
+
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none -p @tool/../${VERSION}/lib
