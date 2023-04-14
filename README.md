@@ -4,24 +4,32 @@
 
 ### Requirements:
 
-#### Landing page jupyter notebook
+#### Landing page Jupyter Notebook
 
-The landing page jupyter notebook contains the calls to run jupyter-book, for example, ghub_exercise2_landing_page.ipynb.
+The landing page Jupyter Notebook, ghub_exercise2_landing_page.ipynb, contains the call to build the Jupyter Book.
 
 #### middleware directory invoke script
 
-The middleware directory invoke script enables the landing page jupyter notebook to be launched on Ghub:
+The middleware directory contains the script, invoke, which enables the landing page Jupyter Notebook to be launched on Ghub:
 
 #!/bin/sh
 
-bindir="$(dirname "$(pwd)")"/bin<br />
-libdir="$(dirname "$(pwd)")"/lib<br />
-export PYTHONPATH=$PYTHONPATH:${bindir}:${libdir}<br />
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none
+# References: https://theghub.org/kb/development/deploy-styles-for-jupyter-tools, https://theghub.org/kb/development/invoke-scripts-for-jupyter-notebooks
+# -A: App Mode
 
-#### Jupyter-book directory
+# Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:
+# -C: Command to execute for starting the tool
+# -T: Tool root directory
+# -t: Sets ${toolname}
+# -u: Set use scripts to invoke before running the tool
+# -r: Set RAPPTURE_VERSION
+# -p: Prepend to the PATH environment variable
 
-The jupyter-book directory contains the _config.yml and _toc.yml files as well as 
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none -p @tool/../${VERSION}/lib
+
+#### Jupyter Book template directory
+
+The Jupyter Book template directory, jupyter-book, contains the _config.yml and _toc.yml files as well as 
 additional files required by the Jupyter Book, for example, index.md.
 
 This directory also contains the link to the actual notebooks displayed by the Jupyter Book. Used ln -s ../notebooks notebooks to create the link.
