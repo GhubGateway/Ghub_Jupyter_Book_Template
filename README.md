@@ -8,7 +8,7 @@
 
 #### notebooks directory
 
-Contains the notebooks to be displayed by the Jupyter Book.
+Contains the Jupyter Notebooks to be displayed by the Jupyter Book.
 
 #### jupyter-book template directory
 
@@ -23,26 +23,9 @@ The landing page Jupyter Notebook, ghub_exercise2_landing_page.ipynb, contains t
 
 #### middleware directory
 
-The middleware directory contains the script, invoke, which enables the landing page Jupyter Notebook to be launched on Ghub from the Ghub Dashboard's My Tools component once the tool is created:
+The middleware directory contains the invoke script which enables the landing page Jupyter Notebook to be launched on Ghub from the Ghub Dashboard's My Tools component.
 
-#!/bin/sh
-
-#References:<br> 
-#https://theghub.org/kb/development/deploy-styles-for-jupyter-tools<br>
-#https://theghub.org/kb/development/invoke-scripts-for-jupyter-notebooks<br>
-#-A: App Mode<br>
-
-#Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:<br>
-#-C: Command to execute for starting the tool<br>
-#-T: Tool root directory<br>
-#-t: Set ${toolname}<br>
-#-u: Set use environment script to invoke before running the tool<br>
-#-r: Set RAPPTURE_VERSION<br>
-#-p: Prepend to the PATH environment variable<br>
-
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none -p @tool/../${VERSION}/lib
-
-### Install Tool on Ghub for Initial Testing:
+### Install and Run the Tool on Ghub for Initial Testing (optional):
 
 #### Launch the Workspace 10 Tool and in a xterm terminal window enter:<br />
 
@@ -72,9 +55,9 @@ python -m pip install . --target ./lib
 
 ```
 
-### Launch Tool on Ghub for Initial Testing:
+Note: for initial testing, need to prepend the lib directory to PYTHONPATH for each of the Jupyter Notebooks in the notebooks directory.
 
-#### Launch the tool using Jupyter Notebooks (202210) tool:<br />
+#### Launch the Jupyter Notebooks (202210) Tool from the Ghub Dashboard's My Tools component:<br />
 
 Open ghub_exercise2/ghub_exercise2.ipynb.<br />
 Click the Appmode button.<br />
