@@ -1,16 +1,29 @@
 ## https://github.com/rljbufny1/ghub_exercise2
 
-- Demonstrates installing a Jupyter Book Github project on Ghub.
+- Demonstrates installing the Jupyter Book Github tool, ghub_exercise2, on Ghub.<br>
+- See https://theghub.org for more information on the Ghub Science Gateway.<br> 
+- See Jupyter Book Zenodo reference: https://doi.org/10.5281/zenodo.2561065 for more information on Jupyter Book.
 
 ### Requirements:
 
-#### Landing page Jupyter Notebook
+#### notebooks directory
 
-The landing page Jupyter Notebook, ghub_exercise2_landing_page.ipynb, contains the call to build the Jupyter Book.
+Contains the notebooks to be displayed by the Jupyter Book.
 
-#### Middleware directory invoke script
+#### jupyter-book template directory
 
-The middleware directory contains the script, invoke, which enables the landing page Jupyter Notebook to be launched on Ghub:
+The Jupyter Book template directory, jupyter-book, contains the _config.yml and _toc.yml files as well as 
+additional files required by the Jupyter Book, index.md and user_manual.md.
+
+This directory also contains a link to the notebooks directory. Use ln -s ../notebooks notebooks to create the link.
+
+#### ghub_exercise2_landing_page.ipynb
+
+The landing page Jupyter Notebook, ghub_exercise2_landing_page.ipynb, contains the calls to build and display the Jupyter Book.
+
+#### middleware directory
+
+The middleware directory contains the script, invoke, which enables the landing page Jupyter Notebook to be launched on Ghub from the Ghub Dashboard's My Tools component once the tool is created:
 
 #!/bin/sh
 
@@ -22,21 +35,14 @@ The middleware directory contains the script, invoke, which enables the landing 
 #Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:<br>
 #-C: Command to execute for starting the tool<br>
 #-T: Tool root directory<br>
-#-t: Sets ${toolname}<br>
-#-u: Set use scripts to invoke before running the tool<br>
+#-t: Set ${toolname}<br>
+#-u: Set use environment script to invoke before running the tool<br>
 #-r: Set RAPPTURE_VERSION<br>
 #-p: Prepend to the PATH environment variable<br>
 
 /usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise2_landing_page.ipynb" -t ghub_exercise2 -u anaconda-7 -r none -p @tool/../${VERSION}/lib
 
-#### Jupyter Book template directory
-
-The Jupyter Book template directory, jupyter-book, contains the _config.yml and _toc.yml files as well as 
-additional files required by the Jupyter Book, index.md and user_manual.md.
-
-This directory also contains the link to the actual notebooks displayed by the Jupyter Book. Used ln -s ../notebooks notebooks to create the link.
-
-### Install on Ghub:
+### Install Tool on Ghub for Initial Testing:
 
 #### Launch the Workspace 10 Tool and in a xterm terminal window enter:<br />
 
@@ -45,7 +51,7 @@ git clone https://github.com/rljbufny1/ghub_exercise2
 ```
 or 
 ```
-wget https://github.com/rljbufny1/ghub_exercise2/releases/download/V1.0.0/ghub_exercise2-src.tar.gz
+wget https://github.com/rljbufny1/ghub_exercise2/releases/download/v1.0.0/ghub_exercise2-src.tar.gz
 tar xvzf ghub_exercise2-src.tar.gz
 ```
 
@@ -66,14 +72,22 @@ python -m pip install . --target ./lib
 
 ```
 
-### Launch on Ghub:
+### Launch Tool on Ghub for Initial Testing:
 
-#### Launch  the Jupyter Notebooks (202210) tool:<br />
+#### Launch the tool using Jupyter Notebooks (202210) tool:<br />
 
 Open ghub_exercise2/ghub_exercise2.ipynb.<br />
 Click the Appmode button.<br />
 
-### References:
+### Create New Tool on Ghub:
 
-See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
-See https://jupyterbook.org/en/stable/intro.html for more information on Jupyter Book.
+Follow the instructions on the https://theghub.org/tools/create web page. Enter ghub_exercise2 for the Tool Name. Select the Repository Host, Host GIT repository on Github, Gitlab, etc.. Select the Publishing Option, Jupyter Notebook.  
+
+Note: created tools are launched from the Ghub Dashboard's My Tools component.
+
+### Notes:
+
+Current web browser results:
+
+Safari and FireFox, Jupyter Book aligned properly, image displays and links work.<br>
+Chrome and Microsoft Edge, Jupyter Book not aligned properly, image does not display, links do not work.
