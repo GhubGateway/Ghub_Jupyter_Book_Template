@@ -55,14 +55,14 @@ wget https://github.com/rljbufny1/ghub_exercise2/releases/download/v1.0.0/ghub_e
 tar xvzf ghub_exercise2-src.tar.gz
 ```
 
-### Install the Utils package per ./setup.py, enter:
+#### Install the Utils package per ./setup.py, enter:
 
 ```
 use -e -r anaconda-7
 python -m pip install . --target ./lib
 ```
 
-### If required, create an environment per ./environment.yml and install the Utils package per ./setup.py to the created environment, enter:
+#### If required, create an environment per ./environment.yml and install the Utils package per ./setup.py to the created environment, enter:
 
 ```
 use -e -r anaconda-7
