@@ -1,6 +1,6 @@
 ## https://github.com/rljbufny1/ghub_exercise2
 
-- Demonstrates installing the Jupyter Book Github tool, ghub_exercise2, on Ghub.<br>
+- Demonstrates the procedure for hosting the Jupyter Book Github tool, ghub_exercise2, on Ghub.<br>
 - See https://theghub.org for more information on the Ghub Science Gateway.<br> 
 - See Jupyter Book Zenodo reference: https://doi.org/10.5281/zenodo.2561065 for more information on Jupyter Book.
 
@@ -27,7 +27,7 @@ The middleware directory contains the invoke script which enables the landing pa
 
 ### Install and Run the Tool on Ghub for Initial Testing (optional):
 
-#### Launch the Workspace 10 Tool and in a xterm terminal window enter:<br />
+#### Launch the Workspace 10 Tool from the Ghub Dashboard's My Tools component and in a xterm terminal window enter:<br />
 
 ```
 git clone https://github.com/rljbufny1/ghub_exercise2
