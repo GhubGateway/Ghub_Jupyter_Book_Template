@@ -10,7 +10,7 @@
 # -r: Rappute version
 # -w: Specify alternative window manager
 
-/usr/bin/invoke_app "$@" -t ghubjb \
+/usr/bin/invoke_app "$@" -t jbtemplate \
                          -u anaconda-7 \
                          -u wrwroxy-0.2 \
                          -r none \
