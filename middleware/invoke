@@ -1,19 +1,16 @@
 #!/bin/sh
 
-# References:
-# https://theghub.org/kb/development/deploy-styles-for-jupyter-tools
-# https://theghub.org/kb/development/invoke-scripts-for-jupyter-notebooks
-# -A: App Mode
-
 # Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:
+# -c: Execute command in background
 # -C: Command to execute for starting the tool
+# -e: Environment variable
+# -t: Tool name
 # -T: Tool root directory
-# -t: Sets ${toolname}
-# -u: Set use environment script to invoke before running the tool
-# -r: Set RAPPTURE_VERSION
-# -e: Set an environment variable
+# -u: Use environment package
+# -r: Rappute version
+# -w: Specify alternative window manager
 
-/usr/bin/invoke_app "$@" -t ghubex2 \
+/usr/bin/invoke_app "$@" -t ghubjb \
                          -u anaconda-7 \
                          -u wrwroxy-0.2 \
                          -r none \
