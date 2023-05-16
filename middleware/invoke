@@ -5,7 +5,6 @@
 # -C: Command to execute for starting the tool
 # -e: Environment variable
 # -t: Tool name
-# -T: Tool root directory
 # -u: Use environment package
 # -r: Rappute version
 # -w: Specify alternative window manager

@@ -8,22 +8,33 @@
 
 #### notebooks directory
 
-This directory contains the Jupyter Notebooks displayed by the Jupyter Book.
+This directory contains the Jupyter Notebooks ending in .ipynb contained  by the Jupyter Book. 
 
-#### jupyter_book_build_dir directory
+The name of this directory must be consistent with the link to this directory specified in the jupyter_book_contents directory and the name of this directory specified in the jupyter_book_contents/_toc.yml file.
 
-This directory contains the _config.yml and _toc.yml files as well as additional files required   Jupyter Book including index.md and user_manual.md.
+#### jupyter_book_contents directory
+
+This directory contains the Jupyter Book configuration file, _config.yml, and the Jupyter Book table of contents file, _toc.yml, as well as additional markdown files required to build the Jupyter Book including index.md and user_manual.md.
 
 This directory also contains a link to the notebooks directory. Used ln -s ../notebooks notebooks to create the link.
 
+The name of this directory must be consistent with the name of this directory specified in the src/Makefile and bin/showbook.sh files.
+
 #### src directory
 
-This directory contains the Makefile which builds the Jupyter Book on Ghub.
+This directory contains the Makefile which contains the command to generate the Jupyter Book HTML files on Ghub: jupyter-book build --all jupyter_book_template. The generated HTML files are placed in the  jupyter_book_contents/_build/html  directory.
+
+#### bin directory
+
+This directory contains the showbook.sh script to view the generated HTML files using a web browser.
 
 #### middleware directory
-This directory contains the invoke script which enables the Jupyter Book to be launched on Ghub
 
-#### Install the packages per ./setup.py, enter:
+This directory contains the invoke script which enables the Jupyter Book to be launched on Ghub.
+
+### Setup
+
+#### To Install packages per ./setup.py, enter:
 
 ```
 use -e -r anaconda-7
@@ -40,7 +51,7 @@ python -m pip install . --target ./lib
 
 ```
 
-### Create New Tool on Ghub:
+### Create the New Tool on Ghub:
 
 Follow the instructions on the https://theghub.org/tools/create web page. Select the Repository Host, Host GIT repository on Github. Select the Publishing Option, Jupyter Notebook.  
 

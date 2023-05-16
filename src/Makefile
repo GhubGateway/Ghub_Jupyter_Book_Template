@@ -1,12 +1,12 @@
 all:
 
 install:
-	cd ..; export PYTHONPATH=$$PWD; jupyter-book build --all jupyter-book-build-dir
+	cd ..; export PYTHONPATH=$$PWD; jupyter-book build --all jupyter_book_contents
 
 clean:
 
 distclean: clean
-	cd ..; jupyter-book clean jupyter-book-build-dir
+	cd ..; jupyter-book clean jupyter_book_contents
 
 .PHONY: all install clean distclean
 
