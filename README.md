@@ -22,7 +22,7 @@ The name of this directory must be consistent with the name of this directory sp
 
 #### src directory
 
-This directory contains the Makefile which contains the command to generate the Jupyter Book HTML files on Ghub: jupyter-book build --all jupyter_book_template. The generated HTML files are placed in the  jupyter_book_contents/_build/html  directory.
+This directory contains the Makefile which contains the command to generate the Jupyter Book HTML files on Ghub: jupyter-book build --all jupyter_book_contents. The generated HTML files are placed in the  jupyter_book_contents/_build/html  directory.
 
 #### bin directory
 
