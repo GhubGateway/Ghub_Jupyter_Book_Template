@@ -32,13 +32,21 @@ This directory contains the showbook.sh script to view the Jupyter Book's HTML f
 
 This directory contains the invoke script which enables the Jupyter Book to be launched on Ghub.
 
-### Setup
+### Create the New Tool on Ghub:
+
+Follow the instructions on the https://theghub.org/tools/create web page. Select the Repository Host, Host GIT repository on Github. Select the Publishing Option, Jupyter Notebook.  
+
+Note: created tools are launched from the Ghub Dashboard's My Tools component.
+
+### Install (Ghub Administrator)
 
 #### To Install packages per ./setup.py, enter:
 
 ```
 use -e -r anaconda-7
 python -m pip install . --target ./lib
+cd src
+make install
 ```
 
 #### If required, create an environment per ./environment.yml and install packages per ./setup.py to the created environment, enter:
@@ -48,14 +56,10 @@ use -e -r anaconda-7
 conda env create -f environment.yml --prefix ./env
 conda activate ./env
 python -m pip install . --target ./lib
+cd src
+make install
 
 ```
-
-### Create the New Tool on Ghub:
-
-Follow the instructions on the https://theghub.org/tools/create web page. Select the Repository Host, Host GIT repository on Github. Select the Publishing Option, Jupyter Notebook.  
-
-Note: created tools are launched from the Ghub Dashboard's My Tools component.
 
 ### Notes:
 

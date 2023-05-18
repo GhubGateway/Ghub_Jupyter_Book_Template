@@ -9,10 +9,11 @@
 # -r: Rappute version
 # -w: Specify alternative window manager
 
-tool_dir="$(dirname "${TOOLDIR}")"
-tool_name="$(basename "${tool_dir}")"
+#tool_dir="$(dirname "${TOOLDIR}")"
+#tool_name="$(basename "${tool_dir}")"
+#-t ${tool_name}
 
-/usr/bin/invoke_app "$@" -t ${tool_name} \
+/usr/bin/invoke_app "$@" -t ghubex2 \
                          -u anaconda-7 \
                          -u wrwroxy-0.2 \
                          -r none \
