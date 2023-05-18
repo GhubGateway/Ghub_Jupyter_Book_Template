@@ -38,29 +38,6 @@ Follow the instructions on the https://theghub.org/tools/create web page. Select
 
 Note: created tools are launched from the Ghub Dashboard's My Tools component.
 
-### Install (Ghub Administrator)
-
-#### To Install packages per ./setup.py, enter:
-
-```
-use -e -r anaconda-7
-python -m pip install . --target ./lib
-cd src
-make install
-```
-
-#### If required, create an environment per ./environment.yml and install packages per ./setup.py to the created environment, enter:
-
-```
-use -e -r anaconda-7
-conda env create -f environment.yml --prefix ./env
-conda activate ./env
-python -m pip install . --target ./lib
-cd src
-make install
-
-```
-
 ### Notes:
 
 Current web browser results:
