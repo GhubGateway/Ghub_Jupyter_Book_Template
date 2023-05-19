@@ -28,13 +28,17 @@ This directory contains the Makefile which contains the command to generate the 
 
 This directory contains the showbook.sh script to view the Jupyter Book's HTML files using a web browser.
 
+Note: the showbrook.sh script must be an executable file.
+
 #### middleware directory
 
 This directory contains the invoke script which enables the Jupyter Book to be launched on Ghub.
 
+Note: the invoke script must be an executable file.
+
 ### Create the New Tool on Ghub:
 
-Follow the instructions on the https://theghub.org/tools/create web page. Select the Repository Host, Host GIT repository on Github. Select the Publishing Option, Jupyter Notebook.  
+Follow the instructions on the https://theghub.org/tools/create web page to create a new tool. Select the Repository Host, Host GIT repository on Github. Select the Publishing Option, Jupyter Notebook.  
 
 Note: created tools are launched from the Ghub Dashboard's My Tools component.
 
