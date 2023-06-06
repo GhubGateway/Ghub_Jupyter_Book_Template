@@ -52,4 +52,4 @@ Note: created tools are launched from the Ghub Dashboard's My Tools component.
 
 Current web browser results:
 
-Firefox, Google Chrome, Microsoft Edge and Safari, Jupyter Book aligned properly, image displays and links work.<br>
+Firefox, Google Chrome, Microsoft Edge and Safari, Jupyter Book aligns properly, image displays and links work.<br>
