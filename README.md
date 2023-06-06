@@ -24,17 +24,23 @@ The name of this directory must be consistent with the name of this directory sp
 
 This directory contains the Makefile which contains the command to generate the Jupyter Book's HTML files on Ghub: jupyter-book build --all jupyter_book_contents. The generated HTML files are placed in the jupyter_book_contents/_build/html  directory.
 
+To install the Makefile, launch the Workspace 10 Tool from the Ghub Dashboard's My Tools component and in a xterm terminal window, 
+cd to the src directory and enter:<br />
+
+use -e -r anaconda-7<br />
+make install
+
 #### bin directory
 
 This directory contains the showbook.sh script to view the Jupyter Book's HTML files using a web browser.
 
-Note: the showbrook.sh script must be an executable file.
+Note: the showbook.sh script must have the executable file permissions bits set. For example, use chmod 755 showbook.sh  to set the executable file permission bits.
 
 #### middleware directory
 
 This directory contains the invoke script which enables the Jupyter Book to be launched on Ghub.
 
-Note: the invoke script must be an executable file.
+Note: the invoke script must have the executable file permission bits set. For example, use chmod 755 invoke to set the executable file permission bits.
 
 ### Create the New Tool on Ghub:
 
