@@ -1,7 +1,7 @@
 all:
 
 install:
-	cd ..; export PYTHONPATH=$$PWD; jupyter-book build --all jupyter_book_contents
+	. /etc/environ.sh; use -e -r anaconda-7; cd ..; export PYTHONPATH=$$PWD; jupyter-book build --all jupyter_book_contents
 
 clean:
 
