@@ -1,6 +1,6 @@
 ## https://github.com/rljbufny1/ghub_exercise2
 
-- Procedures and template files for hosting a Jupyter Book Github tool on Ghub.<br>
+- Procedures and template files for hosting a Jupyter Book Github tool on the Ghub Science Gateway.<br>
 - See https://theghub.org for more information on the Ghub Science Gateway.<br> 
 - See https://help.hubzero.org/documentation/22/tooldevs/jupyter-notebooks for more information on Ghub Jupyter Notebooks.<br>
 - See Jupyter Book Zenodo reference: https://doi.org/10.5281/zenodo.2561065 for more information on Jupyter Book.<br>
@@ -55,9 +55,9 @@ Follow the instructions on the https://theghub.org/tools/create web page to crea
 
 #### Host subversion repository on HUB
 
-Follow the instructions on the https://theghub.org/tools/create web page to create a new tool. Select the Repository Host: Host subversion repository on HUB. Select the Publishing Option, Jupyter Notebook. Enter the name of you tool, for example, ghubex2.
+Alternately, follow the instructions on the https://theghub.org/tools/create web page to create a new tool and select the Repository Host: Host subversion repository on HUB. Select the Publishing Option, Jupyter Notebook and enter the name of your tool, for example, ghubex2.
 
-In this case, the src/Makefile and middleware/invoke scripts will be created automatically and stored in the subversion (svn) repository on Ghub. You will need to modify the src/Makefile and middleware/invoke scripts and add the bin/showbook.sh script to the svn repository as required. You will also need to add the notebooks and jupyter_book_contents directories. The name of your tool should be the same as the name of your tool specfied in the middleware/invoke script's /usr/bin/invoke_app's -t option.
+In this case, the src/Makefile and middleware/invoke scripts will be created automatically and stored in the subversion repository (svn) on Ghub. You will need to modify the src/Makefile and middleware/invoke scripts and add the bin/showbook.sh script to the svn repository as required. You will also need to add the notebooks and jupyter_book_contents directories. The name of your tool should be the same as the name of your tool specfied in the middleware/invoke script's /usr/bin/invoke_app's -t option.
 
 Example svn commands:
 
