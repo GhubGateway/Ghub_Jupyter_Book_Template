@@ -21,15 +21,7 @@ The name of the jupyter_books_contents directory must the same as the name of th
 
 #### src directory
 
-Note: a Ghub administrator will install your tool.
-
 This directory contains the Makefile which contains the command to generate the Jupyter Book's HTML files on Ghub: jupyter-book build --all jupyter_book_contents. The generated HTML files are placed in the jupyter_book_contents/_build/html directory.
-
-To install the Makefile, launch the Workspace 10 Tool from the Ghub Dashboard's My Tools component and in a xterm terminal window, 
-login to the apps group, cd to the tool's dev/src directory and enter:<br />
-
-use -e -r anaconda-7<br />
-make install
 
 #### middleware directory
 
