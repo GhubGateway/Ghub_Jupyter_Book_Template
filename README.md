@@ -1,4 +1,4 @@
-## https://github.com/rljbufny1/ghub_exercise2
+## Ghub Jupyter Book Example
 
 - Procedures and template files for hosting a Jupyter Book Github tool on the Ghub Science Gateway.<br>
 - See https://theghub.org for more information on the Ghub Science Gateway.<br> 
