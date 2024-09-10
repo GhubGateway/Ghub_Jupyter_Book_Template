@@ -33,11 +33,14 @@ class Tree():
         # contents each get pointers that are ├── with a final └── :
         pointers = [tee] * (len(contents) - 1) + [last]
         for pointer, path in zip(pointers, contents):
-            yield prefix + pointer + path.name
-            if path.is_dir(): # extend the prefix and recurse:
-                extension = branch if pointer == tee else space 
-                # i.e. space because last, └── , above so no more |
-                yield from self.print_next(path, prefix=prefix+extension)
+            # exclude the .git directory
+            if path.name != '.git':
+                # yield - return value and continue
+                yield prefix + pointer + path.name
+                if path.is_dir(): # extend the prefix and recurse:
+                    extension = branch if pointer == tee else space
+                    # i.e. space because last, └── , above so no more |
+                    yield from self.print_next(path, prefix=prefix+extension)
 
     def print_tree(self):
         p = Path(self.dir_path)

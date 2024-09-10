@@ -1,14 +1,6 @@
 #!/bin/sh
 
-# Reference: https://help.hubzero.org/documentation/22/tooldevs/invoke:
-# -c: Execute command in background
-# -C: Command to execute for starting the tool
-# -e: Environment variable
-# -t: Tool name
-# -u: Use environment package
-# -r: Rappute version
-# -w: Specify alternative window manager
-
+# Reference: https://theghub.org/kb/development/invoke-scripts-for-jupyter-notebooks
 /usr/bin/invoke_app "$@" -t ghubex2 \
                          -u anaconda-7 \
                          -u wrwroxy-0.2 \
