@@ -13,19 +13,28 @@ The template's Jupyter Book comprises this User Manual and two Jupyter Notebooks
 <a name="steps_to_create_a_jupyter_book_tool"></a>
 ## Steps to Create a Jupyter Book Tool
 
-[Get the Jupyter Book Template Files](#get_the_jupyter_book_template_files)<br />
 [Create Your Tool on Ghub](#create_your_tool_on_ghub)<br />
+[Get the Template Files](#get_the_template_files)<br />
 [Update Your Tool Using the Template Files as a Guideline](#update_your_tool)<br />
-[Verify Your Tool Updates](#verify_your_tool_updates)<br />
-[Commit Your Tool Updates to Your Tool's Repository](#commit_your_tool_updates)<br/>
+[Verify Your Tool's Updates](#verify_your_tool_updates)<br />
+[Commit Your Tool's Updates to Your Tool's Repository](#commit_your_tool_updates)<br/>
 
 
-<a id="get_the_jupyter_book_template_files"></a>
-### Get the  Jupyter Book Template Files[&#8607;](#steps_to_create_a_jupyter_book_tool)
+<a id="create_your_tool_on_ghub"></a>
+### Create Your Tool on Ghub[&#8607;](#steps_to_create_a_jupyter_book_tool)
 
-- Launch the Workspace 10 Tool from the Ghub Dashboard's My Tools component, and in an xterm terminal window, clone the GitHub repository for the Jupyter Book template located at [Ghub Jupyter Book Template](https://github.com/GhubGateway/Ghub_Jupyter_Book_Template):
+- Follow the instructions on the [Create New Tool](https://theGhub.org/tools/create) web page.  Enter a name for your tool, referred to as **your_tool_name** in this document. Select the Publishing Option, Jupyter Notebook.<br><br> 
+    
+- When your tool is created with the **Host GIT repository on HUB** or **Host subversion repository on HUB** repository host, the tool's repository is automatically created using [Hub Tool Directory Structure](https://theghub.org/kb/development/directorystructure) guidelines. When your tool is created with the **Host GIT repository on Github, Gitlab, etc.** repository host, please follow the recommended directory structure for your GitHub repository. For a Jupyter Book tool, the src, bin, and middleware directories are required.<br><br>
+    
+- When your tool is created, you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the Ghub Administrators know when you are ready to update, install, approve, or publish your tool. See [Tool development workflow](https://theghub.org/kb/development/tooldevelopmentworkflow) for more information on developing, testing, troubleshooting, and deploying tools on Ghub.
 
-	**git clone https&#58;&#47;&#47;github&#46;com&#47;GhubGateway&#47;Ghub_Jupyter_Book_Template**<br><br>
+
+<a id="get_the_template_files"></a>
+### Get the  Template Files[&#8607;](#steps_to_create_a_jupyter_book_tool)
+
+- This tool's GitHub repository is located at [Ghub Jupyter Book Template](https://github.com/GhubGateway/Ghub_Jupyter_Book_Template) and can be cloned with: 
+	- *git&#32;clone&#32;https&#58;&#47;&#47;github&#46;com&#47;GhubGateway&#47;Ghub&#95;Jupyter&#95;Book&#95;Template*.<br><br>
 
 
 - In what follows, the name of the template's Jupyter Book is **template_jupyter_book** and the name of the subdirectory that contains the Jupyter Notebooks comprised by the template's Jupyter Book is **template_jupyter_book/template_jupyter_notebooks**.<br><br>
@@ -37,16 +46,6 @@ The template's Jupyter Book comprises this User Manual and two Jupyter Notebooks
 - The template's bin directory contains the required showbook&#46;sh script, which contains commands to view the Jupyter Book's HTML files using a web browser.<br><br>
 
 - The template's middleware directory contains the required invoke script, which contains the command to launch the Jupyter Book on Ghub.
-
-
-<a id="create_your_tool_on_ghub"></a>
-### Create Your Tool on Ghub[&#8607;](#steps_to_create_a_jupyter_book_tool)
-
-- Follow the instructions on the [Create New Tool](https://theGhub.org/tools/create) web page.  Enter a name for your tool, referred to as **your_tool_name** in this document. Select the Publishing Option, Jupyter Notebook.<br><br> 
-    
-- When your tool is created with the *Host GIT repository on HUB* or *Host subversion repository on HUB* repository host, the tool's repository is automatically created using [Hub Tool Directory Structure](https://theghub.org/kb/development/directorystructure) guidelines. When your tool is created with the *Host GIT repository on Github, Gitlab, etc.* repository host, please follow the recommended directory structure for your Git repository. For a Jupyter Book tool, the src, bin, and middleware directories are required.<br><br>
-    
-- When your tool is created, you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the Ghub Administrators know when you are ready to update, install, approve, or publish your tool. See [Tool development workflow](https://theghub.org/kb/development/tooldevelopmentworkflow) for more information on developing, testing, troubleshooting, and deploying tools on Ghub.
 
 
 <a id="update_your_tool"></a>
@@ -64,7 +63,7 @@ The template's Jupyter Book comprises this User Manual and two Jupyter Notebooks
 
 
 <a id="verify_your_tool_updates"></a>
-### Verify Your Tool Updates[&#8607;](#steps_to_create_a_jupyter_book_tool)
+### Verify Your Tool's Updates[&#8607;](#steps_to_create_a_jupyter_book_tool)
 
 - For module testing only, the template's *jupyter_book_build_module_test.ipynb* Jupyter Notebook is provided.<br><br> 
 
@@ -80,15 +79,15 @@ The template's Jupyter Book comprises this User Manual and two Jupyter Notebooks
 
 
 <a id="commit_your_tool_updates"></a>
-### Commit Your Tool Updates to Your Tool's Repository[&#8607;](#steps_to_create_a_jupyter_book_tool)
+### Commit Your Tool's Updates to Your Tool's Repository[&#8607;](#steps_to_create_a_jupyter_book_tool)
 
-- When your tool is created with the *Host GIT repository on HUB* or *Host GIT repository on Github, Gitlab, etc.* repository host:
+- When your tool is created with the **Host GIT repository on HUB** or **Host GIT repository on Github, Gitlab, etc.** repository host:
 
     - git add all new directories and all new or updated files
 	- git commit -m "Your commit message"
 	- git push<br><br>
 
-- When your tool is created with the *Host subversion repository on HUB* repository host:
+- When your tool is created with the **Host subversion repository on HUB** repository host:
 
     - svn add all new directories and files
     - svn commit -m "Your commit message"<br><br>
